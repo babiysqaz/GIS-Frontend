@@ -2,10 +2,7 @@
 </script>
 
 <template>
-  <div>
-    <h1>Vue 3 + TypeScript + Vite</h1>
-    <p>Project is ready!</p>
-  </div>
+  <router-view />
 </template>
 
 <style scoped>
