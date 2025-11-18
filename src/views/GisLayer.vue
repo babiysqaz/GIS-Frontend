@@ -3,6 +3,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import Map from '@arcgis/core/Map'
 import MapView from '@arcgis/core/views/MapView'
 import TileLayer from '@arcgis/core/layers/TileLayer'
+import FeatureLayer from '@arcgis/core/layers/FeatureLayer'
 import '@arcgis/core/assets/esri/themes/light/main.css'
 
 const mapDiv = ref<HTMLDivElement>()
@@ -18,7 +19,13 @@ onMounted(() => {
     opacity: 0.5,
   })
 
+  const featureLayer = new FeatureLayer({
+    url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Demographics/USA_Population_Density/MapServer/0',
+    opacity: 0.7,
+  })
+
   map.add(tileLayer)
+  map.add(featureLayer)
 
   view = new MapView({
     container: mapDiv.value,
