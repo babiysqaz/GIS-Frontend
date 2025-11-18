@@ -20,8 +20,8 @@ onMounted(() => {
   })
 
   const featureLayer = new FeatureLayer({
-    url: 'https://services.arcgisonline.com/ArcGIS/rest/services/Demographics/USA_Population_Density/MapServer/0',
-    opacity: 0.7,
+    url: 'https://services.arcgisonline.com/arcgis/rest/services/USA/USA_Major_Cities/FeatureServer/0',
+    opacity: 0.8,
   })
 
   map.add(tileLayer)
