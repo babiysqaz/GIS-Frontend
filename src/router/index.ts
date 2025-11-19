@@ -6,12 +6,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/Home.vue'),
+      component: () => import('../views/GisLayer.vue'),
     },
     {
-      path: '/gis-layer',
-      name: 'gis-layer',
-      component: () => import('../views/GisLayer.vue'),
+      path: '/home',
+      name: 'home-page',
+      component: () => import('../views/Home.vue'),
     },
   ],
 })
