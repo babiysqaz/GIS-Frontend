@@ -1,10 +1,16 @@
+// eslint.config.js
 import antfu from '@antfu/eslint-config'
 
-export default antfu({
-  typescript: true,
-  vue: true,
-  formatters: {
-    css: true,
-    html: true,
+export default antfu(
+  {
+    ignores: [
+      'README.md',
+    ],
+    rules: {
+      'no-console': 'off',
+      'node/prefer-global/process': 'off',
+      'ts/prefer-literal-enum-member': 'off',
+      'unused-imports/no-unused-vars': 'off',
+    },
   },
-})
+)
